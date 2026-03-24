@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Login 2</title>
+</head>
+<body>
+	<script>
+		function checkvalue()
+		{
+			let username=document.getElementById("email").value;
+			let usernamepattern=/\W+@\W+\.W+/;
+			if(pattern.test(user))
+			{
+				console.log("correct");
+			}
+			else
+			{
+				alert("Incorrect");
+			}
+		}
+	</script>
+<head>
+<body>
+	<h2 align=center"> Welcome!</h2>
+	username:<input type="email" id="email" placeholder="name@gmail.com"><br><br>
+	password:<input type="password" id="password" placeholder="password"><br><br>
+	<input type="submit" value="submit" id="btn" onclick=checkvalue()>
+	<script>
+		document.getElementById("btn").addEventListener("click",function()
+		{
+			let password=document.getElementById("password").value;
+			if(password.length<6 || password.length>12)
+			{
+				alert("password is Incorrect");
+			}
+			else
+			{
+				alert("password is correct");
+			}
+		});
+	</script>
+</body>
+</html>
